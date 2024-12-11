@@ -93,20 +93,25 @@ function handleSearch() {
     if (status === "OK" && results[0] && results[0].geometry) {
       const userLocation = results[0].geometry.location;
 
-      // Add user location marker
-      if (userLocationMarker) userLocationMarker.map = null; // Clear previous marker
-      userLocationMarker = new google.maps.marker.AdvancedMarkerElement({
-        position: userLocation,
-        map: map,
-        title: "Your Location",
-      });
+      // Check if map is initialized
+      if (map) {
+        // Add user location marker
+        if (userLocationMarker) userLocationMarker.map = null; // Clear previous marker
+        userLocationMarker = new google.maps.marker.AdvancedMarkerElement({
+          position: userLocation,
+          map: map,
+          title: "Your Location",
+        });
 
-      // Center map on user location
-      map.setCenter(userLocation);
-      map.setZoom(12);
+        // Center map on user location
+        map.setCenter(userLocation);
+        map.setZoom(12);
 
-      // Find the nearest clinic
-      findNearestClinic(userLocation);
+        // Find the nearest clinic
+        findNearestClinic(userLocation);
+      } else {
+        console.error("Map is not initialized.");
+      }
     } else {
       console.error("Geocoding failed:", status);
       alert("Could not locate the address. Please try again.");
