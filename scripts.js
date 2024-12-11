@@ -44,11 +44,11 @@ function addClinicMarker(clinic) {
   geocoder.geocode({ placeId: clinic.place_id }, (results, status) => {
     if (status === "OK" && results[0]) {
       const clinicLocation = results[0].geometry.location;
-      const marker = new google.maps.Marker({
-        position: clinicLocation,
-        map: map,
-        title: clinic.name,
-      });
+const marker = new google.maps.marker.AdvancedMarkerElement({
+  position: clinicLocation,
+  map: map,
+  title: clinic.name,
+});
 
       const infoWindow = new google.maps.InfoWindow({
         content: `
