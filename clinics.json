@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Hälsa Group - Bracknell",
+        "place_id": "ChIJ241hlQJ-dkgR8gWON-ZgqSk",
+        "phone": "+443331107023",
+        "services": [
+            {
+                "name": "Chiropractic",
+                "url": "/areas-we-cover/bracknell/chiropractic"
+            },
+            {
+                "name": "Physiotherapy",
+                "url": "/areas-we-cover/bracknell/physiotherapy"
+            }
+        ]
+    },
+    {
+        "name": "Hälsa Group - Burnham",
+        "place_id": "ChIJ4VrAkqFkdkgRD39rem3SSS4",
+        "phone": "+443331107023",
+        "services": [
+            {
+                "name": "Chiropractic",
+                "url": "/areas-we-cover/bracknell/chiropractic"
+            },
+            {
+                "name": "Physiotherapy",
+                "url": "/areas-we-cover/bracknell/physiotherapy"
+            }
+        ]
+    }
+]
